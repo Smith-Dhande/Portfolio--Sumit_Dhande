@@ -457,8 +457,8 @@
     display: flex;
     box-shadow: 0 0 50px grey;
 }
-.blogcards:hover{
-    transform: scale(1.05);
+.blog:hover{
+    transform: scale(1.1);
     transition: 0.5s ease-in-out;
 }
 .blogleft{
