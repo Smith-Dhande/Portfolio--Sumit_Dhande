@@ -1,0 +1,1069 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.hero{
+    display: grid;
+    grid-template-columns: 15% 1fr 1fr;
+    grid-template-rows: 5% 1fr 10% ;
+    height: 100vh;
+    grid-template-areas: 
+    "nav nav nav"
+    ". heroinfo ."
+    ". . .";
+    background-image: url(assets/landingimg.png);
+    color: white;
+    background-size: contain;
+}
+.nav{
+    grid-area: nav;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    width: 100%;
+    height: 4rem;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+}
+
+.menu{
+    position: relative;
+    cursor: pointer;
+}
+
+.menu i{
+    font-size: 24px;
+    text-shadow: 0px 0px 5px grey;
+
+}
+
+.dropdown{
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    text-shadow: 5px 5px 5px grey;
+
+    padding: 12px 25px;
+
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px);
+
+    border-radius: 50px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.4s ease;
+}
+
+.dropdown a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.dropdown a:hover{
+    color: cyan;
+}
+
+.menu:hover .dropdown{
+    opacity: 1;
+    visibility: visible;
+    right: 50px;
+}
+
+.navname h2{
+    font-family: cursive;
+    text-shadow: 0px 0px 5px grey;
+}
+.heroinfo{
+    grid-area: heroinfo;
+    padding-top: 25%;
+}
+
+.name , .ocu {
+    font-size: 2rem;
+}
+.getintouch button{
+    padding: 1.5rem;
+    margin-left: 0%;
+    width: 12rem;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+
+}
+.info{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+
+.whoiam{
+    display: grid;
+    grid-template-columns: 15% 1.3fr 0.7fr 15%;
+    grid-template-rows: 13% 8% 1fr 20%;
+    height: 100vh;
+    grid-template-areas: 
+    ". . . ."
+    ". txt shortdis ."
+    ". whoinfo whopic ."
+    ". . . .";
+}
+.txt{
+    grid-area: txt;
+    padding: 1rem;
+    padding-left: 3rem;
+}
+.txt p{
+    padding: 1rem;
+    padding-top: 0px;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.shortdis{
+    grid-area: shortdis;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    text-align: end;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.whoinfo{
+    grid-area: whoinfo;
+    background-color: lightgrey;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.infotxt p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: grey;
+    padding: 1rem;
+}
+.about{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.whopic{
+    grid-area: whopic;
+    padding: 2rem;
+    display: flex  ;
+    align-items: center;
+    justify-content: center;  
+    background-image: url(assets/whoimg.png);
+    background-size: cover;
+    color: white;
+    text-shadow: 5px 5px 3px grey;
+}
+.whopic ul{
+    list-style: none;
+}
+.whopic li{
+    padding: 1rem;
+    border-bottom: 1px solid grey;
+}
+.about button{
+    padding: 1.2rem;
+    width: 7rem;
+    background-color: black;
+    color: white;
+    margin: 1rem;
+}
+.projects{
+    height: 260vh;
+    display: grid;
+    grid-template-columns: 15% 1fr 1fr 15% ;
+    grid-template-rows: auto repeat(6 , 1fr);
+    grid-template-areas : 
+    
+    " . card1 card2 ."
+    " . card1 card3 ."
+    " . card4 card3 ."
+    " . card4 card5 ."
+    " . card6 card5 ."
+    " . card6 viewall .";
+}
+.head{
+    grid-area: head;
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    color: grey;
+}
+
+
+.prname a{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+}
+.prname a:hover{
+    cursor: pointer;
+}
+.card1{
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    grid-area: card1;
+}
+.card2{
+    grid-area: card2;
+}
+.card1 img{
+    width: 100%;
+}
+.card2 img{
+    width: 100%;
+}
+.card3 img{
+    width: 100%;
+    height: 70%;
+}
+.card4 img{
+    width: 100%;
+}
+.cardalign{
+    padding :3rem;
+}
+
+.card3{
+    grid-area: card3;
+    display: flex;
+    flex-direction: column;
+    vertical-align: top;
+}
+.card4{
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    padding-top: 0px;
+    grid-area: card4;
+}
+.card5{
+    grid-area: card5;
+}
+.card5 img{
+    width: 100%;
+}
+.card6{
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    grid-area: card6;
+    padding-top: 6rem;
+}
+.viewall{
+    grid-area: viewall;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 5rem;
+}
+.viewall a{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 1rem;
+    width: 10rem;
+}
+
+.certifications{
+    display: grid;
+    height: 70vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    grid-template-columns: 15% 0.2fr 0.9fr 1.1fr 15%;
+    grid-template-rows: 15% 1fr 1fr 1fr 25%;
+    grid-template-areas:
+    " .  certxt certxt csrtxt . "
+    " . sr1 cer1 cerdis1 . "
+    " . sr2 cer2 cerdis2 . "
+    " . sr3 cer3 cerdis3 . "
+    " . . . . ." ;
+}
+.sr{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid grey;
+}
+#sr1{
+    grid-area: sr1;
+}
+#sr2{
+    grid-area: sr2;
+}
+#sr3{
+    grid-area: sr3;
+}
+.cer a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 1rem;
+}
+.cername{
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
+    border-top: 2px solid grey;
+    font-size: 1.2rem;
+}
+.cername a{
+    text-decoration: none;
+    color: black;
+}
+
+
+#cer1{
+    grid-area: cer1;
+}
+#cer2{
+    grid-area: cer2;
+}
+#cer3{
+    grid-area: cer3;
+}
+
+.cerdis{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1rem;
+    color: lightgrey;
+    border-top: 2px solid grey;
+}
+.cerdis p{
+    color: black;
+    
+}
+
+#cerdis1{
+    grid-area: cerdis1;
+}
+#cerdis2{
+    grid-area: cerdis2;
+}
+#cerdis3{
+    grid-area: cerdis3;
+}
+
+.certxt{
+    grid-area: certxt;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.5rem;
+    color: black;
+    font-size: 3rem;
+}
+
+
+.skillscards{
+    display: grid;
+    height: 70vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    grid-template-columns: 15% 1fr 15%;
+    grid-template-rows: 10% 8% 1fr 15%;
+    grid-template-areas: 
+    " . . . "
+    " . skillhead . "
+    " . cardcontainer ."
+    " . . .";
+}
+.skillhead{
+    grid-area: skillhead;
+    font-size: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid lightgrey;
+}
+
+.cardcontainer{
+    grid-area: cardcontainer;
+    display: flex;
+    justify-content: space-evenly;
+}
+.skill{
+    width:20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 1.5rem;
+}
+.skill img{
+    width: 100%;
+    height: 80%;
+}
+.skill:hover{
+    transform: scale(1.2);
+    transition: 0.5s ease;
+}
+
+
+.imagesection{
+    height: 60vh;
+    background-image: url(assets/imagesectionback.png);
+    background-size: cover;
+}
+
+#blogs{
+    display: grid;
+    grid-template-columns: 20% 1fr 20%;
+    grid-template-rows: 20% 1fr 20%;
+    height: 90vh;
+    width: 100%;
+    grid-template-areas: 
+    " . blogtxt . "
+    " . blogcards . "
+    " . viewallblogs .";
+}
+.blogtxt{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 2rem;
+    grid-area: blogtxt;
+}
+
+.blogcards{
+    grid-area: blogcards;
+    display: flex;
+    box-shadow: 0 0 50px grey;
+}
+.blogcards:hover{
+    transform: scale(1.05);
+    transition: 0.5s ease-in-out;
+}
+.blogleft{
+    display: flex;
+    flex-direction: column;
+}
+#blog1{
+    /* background-image: url(assets/htmlimg.png); */
+    width: 100%;
+    height: 50%;
+    background-color: grey;
+}
+#blog2{
+    /* background-image: url(assets/htmlimg.png); */
+    width: 100%;
+    height: 50%;
+    background-color: lightgrey;
+}
+#blog3{
+    background-image: url(assets/cssimg.png);
+    width: 100%;
+    height: 100%;
+}
+.viewallblogs{
+    grid-area: viewallblogs;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 1rem;
+}
+.viewallblogs a{
+    text-decoration: none;
+    color: black;
+}
+.blog{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-shadow: 3px 3px 3px grey;
+    justify-content: flex-end;
+}
+.blogpara{
+    width :auto;
+    font-size: small;
+    line-height: 1.6;
+    height: calc(1.6em *3);
+    overflow: hidden;
+    transition: 1s ease;
+}
+.blogpara:hover{
+    height: auto;
+    max-height: 90%;
+}
+
+.contactform{
+    display: grid;
+    grid-template-columns: 15% 1fr 15%;
+    grid-template-rows: 10% 1fr 10%;
+    height: 100vh;
+    background-image: url(assets/contactbg.png);
+    color: white;
+    grid-template-areas: 
+    " . formhead . "
+    " . form . "
+    " . . . ";
+}
+.contactform{
+    display: grid;
+    grid-template-columns: 15% 1fr 15%;
+    grid-template-rows: 10% 1fr 10%;
+    height: 100vh;
+    background-image: url(assets/contactbg.png);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    grid-template-areas: 
+    ". formhead ."
+    ". form ."
+    ". . .";
+}
+
+.formhead{
+    grid-area: formhead;
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.form{
+    grid-area: form;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form form{
+    background: rgba(255, 255, 255 , 0,8);
+    padding: 35px 45px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 20px rgba(1,1,1,1);
+}
+form:hover{
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+.form table{
+    border-spacing: 18px;
+}
+
+.form label{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.form input[type="text"],.form input[type="email"]{
+    width: 280px;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background: #222;
+    color: white;
+    font-size: 15px;
+}
+
+.form input[type="checkbox"]{
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.form button[type="submit"]{
+    padding: 2rem;
+    border-radius: 1rem;
+    height: 2rem;
+    width: 100%;
+    background-color: #919191;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form button:hover{
+    background-color: aqua;
+    transition: 1s;
+    color: black;
+}
+.form td{
+    vertical-align: top;
+}
+.footer{
+    display: grid ;
+    min-height: 30vh;
+    grid-template-columns: 10% 1fr 1fr 1fr 10%;
+    grid-template-rows: 5% 1fr 5%;
+    grid-template-areas: 
+    " . . . . . "
+    " . footname navlinks socialicons ."
+    " . . . . . ";
+}
+.footname{
+    grid-area: footname;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    
+    justify-content: center;
+}
+.ftname{
+    font-size: 1.5rem;
+}
+.footlinks{
+    grid-area: navlinks;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 5rem;
+}
+.footlinks ul{
+    
+    list-style: none;
+}
+.footlinks a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.socialicons{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    grid-area: socialicons;
+    display: flex;
+    justify-content: center;    
+    text-align: center;
+}
+.socialicons ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    list-style: none;
+    text-decoration: none;
+    align-items: center;
+}
+
+
+
+@media (max-width:1024px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .hero,
+    .whoiam,
+    .projects,
+    .certifications,
+    .skillscards,
+    #blogs,
+    .contactform,
+    .footer{
+        height: auto;
+    }
+
+    .hero{
+        grid-template-columns: 8% 1fr 8%;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .whoiam{
+        grid-template-columns: 8% 1fr 8%;
+        grid-template-areas:
+        ". txt ."
+        ". shortdis ."
+        ". whoinfo ."
+        ". whopic .";
+        grid-template-rows: auto;
+        gap: 2rem;
+        padding: 4rem 0;
+    }
+
+    .txt,
+    .shortdis{
+        text-align: center;
+    }
+
+    .projects{
+        grid-template-columns: 8% 1fr 1fr 8%;
+    }
+
+    .card1,
+    .card4,
+    .card6,
+    .cardalign{
+        padding: 1.5rem;
+    }
+
+    .certifications{
+        height: auto;
+        grid-template-columns: 8% 0.2fr 1fr 1fr 8%;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+        ". certxt certxt certxt ."
+        ". sr1 cer1 cerdis1 ."
+        ". sr2 cer2 cerdis2 ."
+        ". sr3 cer3 cerdis3 .";
+        row-gap: 2rem;
+        padding: 4rem 0;
+    }
+
+    .cername,
+    .cerdis,
+    .sr{
+        padding-top: 1rem;
+        align-items: flex-start;
+    }
+
+    .cardcontainer{
+        padding: 20%;
+        height: auto;
+        gap: 2rem;
+        flex-wrap: wrap;    
+    }
+
+    .skill{
+        width: 40%;
+    }
+
+    .blogcards{
+        flex-direction: column;
+    }
+
+    #blog1,
+    #blog2,
+    #blog3{
+        height: 300px;
+    }
+
+    .footer{
+        grid-template-columns: 8% 1fr 1fr 8%;
+        grid-template-rows: 1fr 1fr ;
+        grid-template-areas:
+        ". footname footname ."
+        ". navlinks socialicons .";
+        padding: 3rem 0;
+        gap: 2rem;
+    }
+    .footname{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        grid-area: footname;
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+
+    .footlinks{
+        padding: 0;
+    }
+
+    .socialicons ul{
+        gap: 1rem;
+    }
+}
+
+
+
+@media (max-width:768px){
+
+    .hero{
+        grid-template-columns: 5% 1fr 5%;
+        text-align: center;
+    }
+
+    .heroinfo{
+        padding-top: 45%;
+    }
+
+    .name,
+    .ocu{
+        font-size: 1.3rem;
+    }
+
+    .dropdown{
+        flex-direction: column;
+        top: 70px;
+        right: 0;
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+    .projects{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .viewall{
+        padding: 2rem;
+        align-items: center;
+    }
+
+    .certifications{
+        grid-template-columns: 5% 0.2fr 1fr 5%;
+        grid-template-rows: auto;
+        grid-template-areas:
+        ". certxt certxt ."
+        ". sr1 cer1 ."
+        ". sr1 cerdis1 ."
+        ". sr2 cer2 ."
+        ". sr2 cerdis2 ."
+        ". sr3 cer3 ."
+        ". sr3 cerdis3 .";
+        row-gap: 1rem;
+    }
+
+    .cername,
+    .cerdis{
+        padding: 0.5rem;
+    }
+
+    .skillscards{
+        grid-template-columns: 5% 1fr 5%;
+        padding: 4rem 0;
+    }
+
+    .skill{
+        width: 45%;
+    }
+
+    #blogs{
+        grid-template-columns: 5% 1fr 5%;
+        height: auto;
+        padding: 4rem 0;
+    }
+
+    .contactform{
+        grid-template-columns: 5% 1fr 5%;
+        padding: 4rem 0;
+    }
+
+    .form form{
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .form table{
+        width: 100%;
+    }
+
+    .form tr{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form input[type="text"],
+    .form input[type="email"]{
+        width: 100%;
+    }
+
+    form:hover,
+    .blogcards:hover,
+    .skill:hover{
+        transform: none;
+    }
+
+    .footer{
+        grid-template-columns: 5% 1fr 5%;
+        grid-template-areas:
+        ". footname ."
+        ". navlinks ."
+        ". socialicons .";
+        text-align: center;
+        padding: 3rem 0;
+    }
+
+    .footname,
+    .footlinks,
+    .socialicons{
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footlinks ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .socialicons ul{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}
+
+
+
+@media (max-width:462px){
+
+    .nav{
+        padding: 1rem;
+    }
+
+    .navname h2{
+        font-size: 1rem;
+    }
+
+    .dropdown{
+        width: 170px;
+        right: -10px;
+        gap: 10px;
+    }
+
+    .dropdown a{
+        font-size: 14px;
+    }
+
+    .heroinfo{
+        padding-top: 70%;
+    }
+
+    .name,
+    .ocu{
+        font-size: 1rem;
+    }
+
+    .info{
+        font-size: 0.8rem;
+        line-height: 1.6;
+    }
+
+    .getintouch button{
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .txt p,
+    .certxt,
+    .skillhead,
+    .blogtxt{
+        font-size: 1.4rem;
+    }
+
+    .infotxt p,
+    .cerdis p,
+    .blogpara p{
+        font-size: 0.8rem;
+        line-height: 1.6;
+    }
+
+    .projects{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card1,
+    .card4,
+    .card6,
+    .cardalign{
+        padding: 0.8rem;
+    }
+
+    .prname a{
+        font-size: 0.8rem;
+    }
+
+    .viewall{
+        padding: 1rem;
+    }
+
+    .viewall a{
+        width: 100%;
+        text-align: center;
+    }
+
+    .certifications{
+        grid-template-columns: 5% 0.3fr 1fr 5%;
+    }
+
+    .cername a{
+        font-size: 0.9rem;
+    }
+
+    .skill{
+        width: 100%;
+    }
+
+    #blog1,
+    #blog2,
+    #blog3{
+        height: 220px;
+    }
+
+    .bloghead h3{
+        font-size: 1rem;
+    }
+
+    .form{
+        padding: 1rem 0;
+    }
+
+    .form form{
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .form table{
+        border-spacing: 10px;
+    }
+
+    .form label{
+        font-size: 14px;
+    }
+
+    .form input[type="text"],
+    .form input[type="email"]{
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .footer{
+        padding: 2rem 1rem;
+        gap: 1.5rem;
+    }
+
+    .ftname h1,
+    .footrole h1{
+        font-size: 1.1rem;
+    }
+
+    .footlinks a,
+    .socialicons a{
+        font-size: 0.85rem;
+    }
+}
